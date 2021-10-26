@@ -4,8 +4,7 @@ import pandas as pd
 import pickle
 from PIL import Image
 # model = pickle.load(open('final_model.save.pkl', 'rb'))
-with open('final_model.save' , 'rb') as f:
-    model = pickle.load(f)
+
 
 st.title("Sports Predict App")
 st.header("Sports Performace Prediction")
@@ -34,9 +33,7 @@ data = {'Potential' : potential,
  'Composure' : composure
 
 	}
-# model = pickle.load(open('final_model.save', 'rb'))
-# pklfile = open('final_model.save', 'rb')
-# model = pickle.load(pklfile)
+model = pickle.load(open('final_model.save.pkl', 'rb'))
 
 
 features = pd.DataFrame(data, index=[0])
