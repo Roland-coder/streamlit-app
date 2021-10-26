@@ -31,7 +31,9 @@ data = {'Potential' : potential,
  'Composure' : composure
 
 	}
-model = pickle.load(open('final_model.save', 'rb'))
+# model = pickle.load(open('final_model.save', 'rb'))
+pklfile = open('final_model.save', 'rb')
+model = pickle.load(pklfile)
 
 
 features = pd.DataFrame(data, index=[0])
