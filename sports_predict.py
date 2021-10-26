@@ -30,5 +30,5 @@ data = {'Potential' : potential,
  'Composure' : composure
 
 	}
-features = pd.DataFrame(data, index[0])
 
+features = pd.DataFrame(data, index=[0])
