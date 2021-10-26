@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import pickle
 from PIL import Image
-from smart_open import smart_open
 
 st.title("Sports Predict App")
 st.header("Sports Performace Prediction")
