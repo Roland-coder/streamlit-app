@@ -8,7 +8,7 @@ st.title("Sports Predict App")
 st.header("Sports Performace Prediction")
 st.write("This web app predicts the overall performance of a player based on particular features")
 
-model = pickle.load(open("final_model","rb"))
+model = pickle.load(open("https://mlassignment.s3.eu-de.cloud-object-storage.appdomain.cloud/final_model%20(1).save","rb"))
 image = Image.open("sports.jpg")
 st.image(image, use_column_width=True)
 st.write("Please insert values to get overall prediction of player")
