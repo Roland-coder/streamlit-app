@@ -8,7 +8,7 @@ st.header("Sports Performace Prediction")
 st.write("This web app predicts the overall performance of a player based on particular features")
 
 image = Image.open("sports.jpg")
-st.image(image, use_column_width=True, format='JPG')
+st.image(image, use_column_width=True)
 st.write("Please insert values to get overall prediction of player")
 
 potential = st.slider("Player Potential: ", 0, 100)
