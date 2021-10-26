@@ -32,3 +32,8 @@ data = {'Potential' : potential,
 	}
 
 features = pd.DataFrame(data, index=[0])
+
+
+st.header("Please find predicted value below")
+st.write("The overall predicted score for the above player is", composure)
+
