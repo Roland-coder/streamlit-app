@@ -1,12 +1,14 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import pickle
 from PIL import Image
 
 st.title("Sports Predict App")
 st.header("Sports Performace Prediction")
 st.write("This web app predicts the overall performance of a player based on particular features")
 
+model = pickle.load(open("final_model","rb"))
 image = Image.open("sports.jpg")
 st.image(image, use_column_width=True)
 st.write("Please insert values to get overall prediction of player")
@@ -32,8 +34,8 @@ data = {'Potential' : potential,
 	}
 
 features = pd.DataFrame(data, index=[0])
-
+Prediction = model.predicy(features)
 
 st.header("Please find predicted value below")
-st.write("The overall predicted score for the above player is", composure)
+st.write("The overall predicted score for the above player is", prediction)
 
