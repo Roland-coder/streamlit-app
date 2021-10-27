@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import numpy as np
 from PIL import Image
 # model = pickle.load(open('final_model.save.pkl', 'rb'))
 
@@ -40,5 +41,5 @@ features = pd.DataFrame(data, index=[0])
 prediction = model.predict(features)
 
 st.header("Please find predicted value below")
-st.write("The overall predicted score for the above player is", prediction[0])
+st.write("The overall predicted score for the above player is", np.round(prediction[0]))
 
