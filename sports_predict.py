@@ -4,6 +4,7 @@ import pandas as pd
 import pickle
 import numpy as np
 from PIL import Image
+from smart_open import smart_open
 # model = pickle.load(open('final_model.save.pkl', 'rb'))
 
 
@@ -34,7 +35,8 @@ data = {'Potential' : potential,
  'Composure' : composure
 
 	}
-model = pickle.load(open('final_model.save', 'rb'))
+# model = pickle.load(open('final_model.save', 'rb'))
+model = pickle.load(smart_open('https://mlassignment.s3.eu-de.cloud-object-storage.appdomain.cloud/final_model%20(1).save', 'rb'))
 
 
 features = pd.DataFrame(data, index=[0])
