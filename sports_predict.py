@@ -40,5 +40,5 @@ features = pd.DataFrame(data, index=[0])
 prediction = model.predict(features)
 
 st.header("Please find predicted value below")
-st.write("The overall predicted score for the above player is", prediction)
+st.write("The overall predicted score for the above player is", prediction[0])
 
