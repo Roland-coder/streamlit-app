@@ -35,7 +35,11 @@ data = {'Potential' : potential,
  'Composure' : composure
 
 	}
-model = pickle.load(open('final_model.save', 'rb'))
+@st.cache
+def load_model():
+	  return pickle.load(open('final_model.save', 'rb'))
+model = load_model()
+# model = pickle.load(open('final_model.save', 'rb'))
 # model = pickle.load(smart_open('https://mlassignment.s3.eu-de.cloud-object-storage.appdomain.cloud/final_model%20(1).save', 'rb'))
 
 
