@@ -36,7 +36,7 @@ data = {'Potential' : potential,
 
 	}
 @st.cache
-def load_model():
+def load_model(ttl=30):
 	  return pickle.load(open('final_model.save', 'rb'))
 model = load_model()
 # model = pickle.load(open('final_model.save', 'rb'))
