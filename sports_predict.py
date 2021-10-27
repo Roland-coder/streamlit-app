@@ -36,6 +36,7 @@ data = {'Potential' : potential,
 
 	}
 @st.cache
+@st.cache(hash_funcs={"MyUnhashableClass": lambda _: None}
 def load_model():
 	  return pickle.load(open('final_model.save', 'rb'))
 model = load_model()
